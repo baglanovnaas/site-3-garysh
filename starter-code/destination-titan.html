@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Space tourism website</title>
+</head>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    background-image: url(assets/destination/background-destination-desktop.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+  }
+  .container{
+    padding: 20px;
+    color: white;
+    font-family: sans-serif;
+  }
+  .box1{
+    display: flex;
+    align-items: center;
+    margin-bottom: 80px;
+  }
+  .box1 img{
+    margin-right: 30px;
+  }
+  .box1 nav{
+    background-color: rgba(32, 32, 45, 0.52);
+    padding: 40px;
+    width: 900px;
+  }
+  .box2 nav{
+    margin-bottom: 30px;
+  }
+  nav ul{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+  }
+  .box1 nav ul li a{
+    text-decoration: none;
+    color: rgb(208, 208, 208);
+    font-size: 14px;
+    position: relative;
+    padding-bottom: 5px;
+  }
+  .box2 nav ul li a{
+    text-decoration: none;
+    color: rgb(124, 125, 147);
+    font-size: 14px;
+    position: relative;
+    padding-bottom: 5px;
+  }
+  .box1 nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -34px;
+    width: 0;
+    height: 2px;
+    background-color: white;
+  }
+  .box2 nav ul li a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 0;
+    height: 2px;
+    background-color: white;
+  }
+  nav ul li a.active::after,
+  nav ul li a:hover::after {
+    width: 100%;
+  }
+  .box2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    gap: 120px;
+  }
+  .first{
+    margin-left: 160px;
+  }
+  .second{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .second p{
+    width: 460px;
+    margin-bottom: 30px; 
+    line-height: 25px; 
+    color: rgb(124, 125, 147);
+  }
+  .second h1{
+    margin-bottom: 30px; 
+    font-size: 80px; 
+    font-family: serif; 
+    font-weight: 300;
+  }
+  .numbers{
+    display: flex;
+    align-items: center;
+  }
+  .one h2{
+    font-weight: 300; 
+    font-family: serif; 
+    font-size: 27px; 
+    color: rgb(230, 230, 230);
+  }
+  .two h2{
+    font-weight: 300; 
+    font-family: serif; 
+    font-size: 27px; 
+    color: rgb(230, 230, 230);
+  }
+  @media screen and (max-width: 450px) {
+    body {
+      background-image: url(assets/destination/background-destination-mobile.jpg);
+      background-size: cover;
+      overflow-x: hidden;
+    }
+    .container {
+      width: 100vw;
+    }
+    .box1 {
+      display: none;
+    }
+    .box2 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+    .first{
+      margin-right: 130px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .first img {
+      width: 250px;
+    }
+    .first h2{
+      font-size: 17px;
+      margin-bottom: 5px;
+    }
+    .second{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .second p{
+      width: 400px;
+    }
+    .numbers{
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    nav ul {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 10px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: rgb(208, 208, 208);
+      font-size: 12px;
+    }
+    p{
+      padding: 10px;
+    }
+    h1 {
+      font-size: 50px;
+    }
+  }
+</style>
+<body>
+  <div class="container">
+    <div class="box1">
+      <img src="assets/shared/logo.svg">
+
+      <div style="padding: 1px; width: 900px; background-color: rgb(83, 83, 90);"></div>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">00  HOME</a></li>
+          <li><a href="destination-mars.html">01  DESTINATION</a></li>
+          <li><a href="crew-engineer.html">02  CREW</a></li>
+          <li><a href="technology-vehicle.html">03  TECHNOLOGY</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="box2">
+      <div class="first">
+        <h2 style="margin-bottom: 50px; font-weight: 300; color: rgb(209, 209, 209);">01  PICK YOUR DESTINATION</h2>
+        <img src="assets/destination/image-titan.png">
+      </div>
+
+      <div class="second">
+        <nav>
+          <ul>
+            <li><a href="destination-moon.html">MOON</a></li>
+            <li><a href="destination-mars.html">MARS</a></li>
+            <li><a href="destination-europa.html">EUROPA</a></li>
+            <li><a href="destination-titan.html">TITAN</a></li>
+          </ul>
+        </nav>
+
+        <h1>TITAN</h1>
+
+        <p>The only moon known to have a dense atmosphere other than Earth, Titan 
+          is a home away from home (just a few hundred degrees colder!). As a 
+          bonus, you get striking views of the Rings of Saturn.
+        </p>
+
+        <div style="padding: 1px; width: 300px; background-color: rgb(124, 125, 147); margin-bottom: 30px;"></div>
+
+        <div class="numbers">
+          <div class="one">
+            <p style="color: rgb(124, 125, 147); margin-bottom: 10px;">Avg. distance</p>
+            <h2>1.6 bil. km</h2>
+          </div>
+
+          <div class="two">
+            <p style="color: rgb(124, 125, 147); margin-bottom: 10px;">Est. travel time</p>
+            <h2>7 years</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
